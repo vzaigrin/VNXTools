@@ -1,6 +1,6 @@
 #
 # Merge all nar files in the current directory.
-# Separate nar files by SN and SP name and merge its into SNSP.nar
+# Separate nar files by SN and SP name and merge its into file SNSP.nar
 #
 # Copyright (c) 2015 Vadim Zaigrin <vadim.zaigrin@emc.com>
 #
