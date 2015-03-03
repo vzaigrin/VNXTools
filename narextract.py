@@ -12,6 +12,6 @@ nars = [ file for file in os.listdir('.') if re.match(".*nar$",file) ]
 
 for snsp in set( [ re.match(r'([A-Z0-9]+_SP[AB]).*',file).group(1) for file in nars ] ):
     navi = "naviseccli analyzer -archivedump -data "
-    for file in [ file for file in nars if re.match(snsp+'.*',file) ]: navi += file + " "
+    navi += ' '.join( [ file for file in nars if re.match(snsp+'.*',file) ] )
     os.system( navi + " -join -overwrite y -out " + snsp + ".csv" )
 
