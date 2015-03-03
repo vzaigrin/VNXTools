@@ -1,10 +1,14 @@
 # NarTools
-This is a set of tools for nar files - data files from EMC CLARiiON/VNX
+A set of tools for nar files (data files from EMC CLARiiON/VNX) written on Python.
 
 ### NarMerge
 
-Merge all nar files in the current directory. Separate nar files by SN and SP name and merge its into file SNSP.nar
+Merges all nar files in the current directory.
+It selects all nar files, separates them by array’s serial number (SN) and storage processor name (SP) and then merges them into files SNSP.nar
+
 
 ### NarExtract
 
-Extract data from all nar files in the current directory. Separate nar files by SN and SP name and output results into file SNSP.csv
+Extracts data from all nar files in the current directory.
+It selects all nar files, separates them by array’s serial number (SN) and storage processor name (SP) and then extract data into files SNSP.csv
+
