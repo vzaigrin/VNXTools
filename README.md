@@ -1,6 +1,8 @@
 # NarTools
 A set of tools for nar files (data files from EMC CLARiiON/VNX) written on Python.
 
+Both scripts call standard naviseccli utility, but prepare data for that call.
+
 ### NarMerge
 
 Merges all nar files in the current directory.
