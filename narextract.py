@@ -8,7 +8,7 @@
 import os
 import re
 
-nars = [ file for file in os.listdir('.') if re.match(".*nar$",file) ]
+nars = [ file for file in os.listdir(os.getcwd()) if re.match(".*nar$",file) ]
 
 for snsp in set( [ re.match(r'([A-Z0-9]+_SP[AB]).*',file).group(1) for file in nars ] ):
     navi = "naviseccli analyzer -archivedump -data "

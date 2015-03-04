@@ -1,6 +1,6 @@
 #
 # Merge all nar files in the current directory.
-# Separate nar files by SN and SP name and merge its into file SNSP.nar
+# Separate nar files by SN and SP name and merge its into SNSP.nar
 #
 # Copyright (c) 2015 Vadim Zaigrin <vadim.zaigrin@emc.com>
 #
@@ -24,7 +24,7 @@ def mergelist(pat,list):
         shutil.copyfile(list[0],mname)
 
 
-nars = [ file for file in os.listdir('.') if re.match(".*nar$",file) ]
+nars = [ file for file in os.listdir(os.getcwd()) if re.match(".*nar$",file) ]
 
 for snsp in set( [ re.match(r'([A-Z0-9]+_SP[AB]).*',file).group(1) for file in nars ] ):
     mergelist(snsp, [ file for file in nars if re.match(snsp+'.*',file) ] )
