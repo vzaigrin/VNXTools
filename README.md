@@ -1,21 +1,26 @@
-# NarTools
-A set of tools for nar files (data files from EMC CLARiiON/VNX) written on Python.
+# VNXTools
+A set of tools for EMC CLARiiON/VNX.
 
-Both scripts call standard naviseccli utility, but prepare data for that call.
+Some tools work with NAR files - performance data files - and call standard naviseccli utility.
+
 
 ### NarMerge
 
-Merges all nar files in the current directory.
-It selects all nar files, separates them by array’s serial number (SN) and storage processor name (SP) and then merges them into files SNSP.nar
+Merges all NAR files in the current directory.
+It selects all NAR files, separates them by array’s serial number (SN) and storage processor name (SP) and then merges them into files SNSP.nar
 
 ### NarExtract
 
-Extracts data from all nar files in the current directory.
-It selects all nar files, separates them by array’s serial number (SN) and storage processor name (SP) and then extract data into files SNSP.csv
+Extracts data from all NAR files in the current directory.
+It selects all NAR files, separates them by array’s serial number (SN) and storage processor name (SP) and then extract data into files SNSP.csv
 Also it extracts configuration and relations files in XML format.
 
 ### NarConfiguration
 
-Takes relations information extracted from nar file and generates configuration visualization diagram in the GraphViz format.
+Generates configuration visualization diagram in the GraphViz format by the relations information extracted from the NAR file.
+
+### VNXConfigDiagram
+
+Generates configuration visualization diagram in the GraphViz format by the array configuration information extracted from the 'live' array.
 
 All scripts were tested with Python 3, but also should work with Python 2.
