@@ -1,9 +1,9 @@
 #
 # Generate a description of configuration of EMC CLARiiON/VNX storage aray.
 #
-# It takes a relation information extracted from a nar file and generate a configuration diagram in a graphviz format.
+# It takes a relation information extracted from a NAR file and generate a configuration diagram in a Graphviz format.
 #
-# Copyright (c) 2015 Vadim Zaigrin <vzaigrin@yandex.ru>
+# Copyright (c) 2016 Vadim Zaigrin <vzaigrin@yandex.ru>
 #
 
 import argparse
@@ -116,8 +116,11 @@ if compact:
         out.write("<"+re.sub("-","",disks[i])+"> "+disks[i]+" | ")
     out.write("<"+re.sub("-","",disks[ld1])+"> "+disks[ld1]+"\", style = \"filled\", fillcolor = \"DarkGoldenrod\" ];\n")
 else:
+    out.write("{ rank = same;\n")
     for disk in disks:
         out.write("  \""+disk+"\" [label = \""+disk+"\", style = \"filled\", color = \"DarkGoldenrod\"];\n")
+
+    out.write("};\n")
 
 for lh in lunhosts:
     if compact:
