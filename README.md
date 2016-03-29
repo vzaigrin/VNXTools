@@ -23,4 +23,15 @@ Generates configuration visualization diagram in the GraphViz format by the rela
 
 Generates configuration visualization diagram in the GraphViz format by the array configuration information extracted from the 'live' array.
 
-All scripts were tested with Python 3, but also should work with Python 2.
+### VNXFASTVPReport
+
+Generates reports for EMC VNX Pool LUNs distribution by FAST VP tiers.
+
+Output report to:
+- screen - as simple table
+- csv-file
+- carbon server
+- html-file - with diagrams
+
+VNXFASTVPReport requires Python 3.
+All other scripts were tested with Python 3, but also should work with Python 2.
