@@ -1,6 +1,12 @@
 """
 vnxfastvpreport.py - Reports EMC VNX pool LUNs distribution by FAST VP tiers
 
+Output report to:
+- screen - as simple table
+- csv-file
+- carbon server
+- html - with diagrams
+
 Requirements:
 - Python 3.x
 - naviseccli in the PATH
@@ -190,6 +196,7 @@ if "html" in args.output:
           file = f)
     print("</head>", file = f)
     print("<body>", file = f)
+    print("<h1><center>" + args.address + "</center></h1>", file = f)
 
     for pool in pools:
         poolID = pool.replace(" ", "")
