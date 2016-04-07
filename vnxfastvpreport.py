@@ -1,12 +1,6 @@
 """
 vnxfastvpreport.py - Reports EMC VNX pool LUNs distribution by FAST VP tiers
 
-Output report to:
-- screen - as simple table
-- csv-file
-- carbon server
-- html - with diagrams
-
 Requirements:
 - Python 3.x
 - naviseccli in the PATH
@@ -192,6 +186,8 @@ if "html" in args.output:
     filename = args.filename + ".html"
     f = open(filename, 'wt')
     print("<head>", file = f)
+    print("<meta charset='utf-8'>", file = f)
+    print("<!-- saved from url=(0014)about:internet -->", file = f)
     print("<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>",
           file = f)
     print("</head>", file = f)
