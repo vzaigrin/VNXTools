@@ -33,5 +33,10 @@ Output report to:
 - carbon server
 - html-file - with diagrams
 
+### ACExtract
+
+Extract Arrayconfig files from SPCollect files.
+
+---
 VNXFASTVPReport requires Python 3.
 All other scripts were tested with Python 3, but also should work with Python 2.
